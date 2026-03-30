@@ -42,6 +42,19 @@
 .fids-cancelled { background: #ffcccc; }
 .fids-boarding { background: #cfe3ff; }
 .fids-unknown { background: #e0e0e0; }
+#status-panel {
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    display: inline-block;
+}
+
+.status-ok { background: #28a745; }
+.status-fallback { background: #ffc107; color: #000; }
+.status-offline { background: #dc3545; }
 
   </style>
 </head>
@@ -60,6 +73,8 @@
       <h2>Météo EBLG</h2>
       <div id="meteo-summary" class="small">Chargement...</div>
       <div id="meteo-raw" class="metar"></div>
+      <div id="status-panel"></div>
+
     </div>
 
     <div class="block">
