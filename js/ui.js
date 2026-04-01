@@ -38,6 +38,19 @@ export function initHeatmapToggle(map) {
         }
     };
 }
+export function initClusterToggle(map) {
+    const btn = document.getElementById("toggle-clusters");
+    if (!btn) return;
+
+    btn.onclick = () => {
+        if (map.hasLayer(clusterLayer)) {
+            map.removeLayer(clusterLayer);
+        } else {
+            map.addLayer(clusterLayer);
+        }
+    };
+}
+
 export function initHeatmapHistory(map) {
     const btn = document.getElementById("play-history");
     if (!btn) return;
